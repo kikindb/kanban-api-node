@@ -1,6 +1,6 @@
 FROM node:14.17.5
 
-WORKDIR /usr/src/nodesql
+WORKDIR /usr/src/kanban-api-node
 
 COPY package*.json ./
 

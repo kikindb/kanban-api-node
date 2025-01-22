@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 services:
   # MySQL DB
   mysqldb:
@@ -8,17 +8,17 @@ services:
       MYSQL_ROOT_PASSWORD: 9c%7O?PHoj0O
       MYSQL_DATABASE: appdb
     ports:
-      - "3306:3306"
+      - '3306:3306'
 
   # API
-  nodesql:
+  kanban-api-node:
     depends_on:
       - mysqldb
-    container_name: nodesql
+    container_name: kanban-api-node
     build: ./
     restart: unless-stopped
     command: npm start
-    working_dir: /usr/src/nodesql
+    working_dir: /usr/src/kanban-api-node
     environment:
       DB_NAME: appdb
       DB_HOST: mysqldb
@@ -26,6 +26,6 @@ services:
     links:
       - mysqldb
     ports:
-      - "3000:3000"
+      - '3000:3000'
     #volumes:
-    #  - ./:/usr/src/nodesql
+    #  - ./:/usr/src/kanban-api-node
