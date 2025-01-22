@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+const dotenv = require('dotenv');
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -6,11 +6,11 @@ dotenv.config({
 
 module.exports = {
   development: {
-    username: "root",
-    password: "9c%7O?PHoj0O",
-    database: "appdb",
-    host: "mysqldb",
-    dialect: "mysql",
+    username: 'root',
+    password: '9c%7O?PHoj0O',
+    database: 'appdb',
+    host: 'localhost',
+    dialect: 'mysql',
     dialectOptions: {
       bigNumberStrings: true,
     },
@@ -20,7 +20,7 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
-    dialect: "mysql",
+    dialect: 'mysql',
     dialectOptions: {
       bigNumberStrings: true,
     },
@@ -30,7 +30,7 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
-    dialect: "mysql",
+    dialect: 'mysql',
     dialectOptions: {
       bigNumberStrings: true,
     },
