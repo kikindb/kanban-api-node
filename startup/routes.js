@@ -3,6 +3,7 @@ const helmet = require('helmet');
 const users = require('../routes/users');
 const tasks = require('../routes/tasks');
 const auth = require('../routes/auth');
+const health = require('../routes/health');
 const cors = require('cors');
 const morgan = require('morgan');
 
@@ -37,4 +38,5 @@ module.exports = function (app) {
   app.use('/api/users', users);
   app.use('/api/tasks', tasks);
   app.use('/api/auth', auth);
+  app.use('/api/health', health);
 };

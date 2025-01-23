@@ -1,4 +1,4 @@
-FROM node:14.17.5
+FROM node:22.11.0
 
 WORKDIR /usr/src/kanban-api-node
 
