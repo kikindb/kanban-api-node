@@ -35,8 +35,8 @@ module.exports = function (app) {
   );
   app.use(express.json());
   app.use(morgan('combined'));
-  app.use('/api/users', users);
-  app.use('/api/tasks', tasks);
+  app.use('/api/user', users);
+  app.use('/api/task', tasks);
   app.use('/api/auth', auth);
   app.use('/api/health', health);
 };
